@@ -35,6 +35,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-ver }}
 
-      - uses: pzhlkj6612/forked-install-qt-action@ee6377d00a3ca464dc6e420c0d6ec74daa74a20f
+      - uses: pzhlkj6612/forked-install-qt-action@53ffb82d713f2bb815e121faa02746918b5da41a
         with:
           setup-python: ${{ matrix.aqt-setup-python }}
