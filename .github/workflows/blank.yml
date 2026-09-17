@@ -29,17 +29,12 @@ jobs:
           - aqt-setup-python: true
             python-ver: 3.13
     steps:
-      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-        with:
-          repository: pzhlkj6612/forked-install-qt-action
-          ref: 06bc6c4bcd6fe5dc4da95515acd692b01601a8fc
-
       - name: Setup Python
         if: ${{ !matrix.aqt-setup-python && matrix.python-ver != '' }}
         uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
         with:
           python-version: ${{ matrix.python-ver }}
 
-      - uses: ./
+      - uses: pzhlkj6612/forked-install-qt-action@06bc6c4bcd6fe5dc4da95515acd692b01601a8fc
         with:
           setup-python: ${{ matrix.aqt-setup-python }}
